@@ -1,14 +1,9 @@
-// 7-multi_c.js
-const raw = process.argv[2];
-const n = parseInt(raw, 10);
+#!/usr/bin/node
 
-if (isNaN(n)) {
-  console.log("Missing number of occurrences");
-} else {
-  let out = "";
-  for (let i = 0; i < n; i++) {
-    out += "C is fun";
-    if (i !== n - 1) out += "\n";
-  }
-  console.log(out);
+const num = parseInt(process.argv[2]);
+
+if (isNaN(num)) {
+  console.log('Missing number of occurrences');
+} else if (num > 0) {
+  for (let i = 0; i < num; i++) console.log('C is fun');
 }
